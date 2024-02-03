@@ -1,5 +1,6 @@
 import random
 
+
 class Anagram:
     def __init__(self, word):
         self.word = word
@@ -17,7 +18,20 @@ class Anagram:
             item = ''.join(item)
             shuffled_words.append(item)
 
+        for item in self.word_list:
+            i = 0
+            if item != shuffled_words[i]:
+                pass
+
+            else:
+                random.shuffle(item)
+                item = ''.join(item)
+                shuffled_words[i] = item
+
+            i += 1
+
         print(' '.join(shuffled_words))
 
-new_word = Anagram(str(input('Input key:')))
+
+new_word = Anagram(str(input('Input Key:')))
 new_word.anagram()
