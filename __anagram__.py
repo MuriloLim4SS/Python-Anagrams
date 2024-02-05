@@ -5,7 +5,7 @@ class Anagram:
     def __init__(self, word):
         self.word = word
         self.word_list = None
-
+        self.print_words = None
     def anagram(self):
         self.word_list = []
         for i in self.word.split():
@@ -30,8 +30,8 @@ class Anagram:
 
             i += 1
 
-        print(' '.join(shuffled_words))
+        self.print_words = (' '.join(shuffled_words))
 
 
-new_word = Anagram(str(input('Input Key:')))
-new_word.anagram()
+
+
